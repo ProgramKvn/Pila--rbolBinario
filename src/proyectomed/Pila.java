@@ -20,9 +20,12 @@ private Stack<Integer> Pila = new Stack<Integer>();
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        R = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Lista = new javax.swing.JList<>();
@@ -38,6 +41,8 @@ private Stack<Integer> Pila = new Stack<Integer>();
         jSeparator6 = new javax.swing.JSeparator();
         jSeparator7 = new javax.swing.JSeparator();
         A = new javax.swing.JButton();
+
+        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -73,6 +78,25 @@ private Stack<Integer> Pila = new Stack<Integer>();
             }
         });
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 10, -1, -1));
+
+        R.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/Regresar.png"))); // NOI18N
+        R.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                RMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                RMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                RMouseExited(evt);
+            }
+        });
+        jPanel1.add(R, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
+
+        jLabel4.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setText("Regalos");
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 510, 60));
 
@@ -286,6 +310,20 @@ private Stack<Integer> Pila = new Stack<Integer>();
         }
         }
     }//GEN-LAST:event_AActionPerformed
+
+    private void RMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RMouseEntered
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_RMouseEntered
+
+    private void RMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_RMouseExited
+
+    private void RMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_RMouseClicked
+        PantallaPrincipal PP = new PantallaPrincipal();
+        this.dispose();
+        PP.setVisible(true);
+    }//GEN-LAST:event_RMouseClicked
     private void Actualizar(){
         DefaultListModel nl = new DefaultListModel();
         for(Integer i : Pila){
@@ -332,9 +370,12 @@ private Stack<Integer> Pila = new Stack<Integer>();
     private javax.swing.JButton A;
     private javax.swing.JButton C1;
     private javax.swing.JList<String> Lista;
+    private javax.swing.JLabel R;
     private javax.swing.JButton T1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel6;
